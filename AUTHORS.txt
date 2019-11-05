@@ -1,0 +1,5 @@
+The following have made major contributions to the GatorMail project.
+
+William A. McArthur, Jr. <sandymac@ufl.com>
+Drake S. Emko <drakee@nersp.nerdc.ufl.edu>
+Raymond Page <pagerc@ufl.edu>
