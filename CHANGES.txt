@@ -1,0 +1,4 @@
+191106 + made project compatible with java > 1.4
+
+191105 = project forked off (last?) gatormail 1.0.11 (2004-05-03)
+         from https://sourceforge.net/projects/gatormail/
