@@ -158,16 +158,9 @@
                 <include name="log4j.properties"/>
                 <include name="gatormail.properties"/>
             </fileset>
-            <filterset>
-                <filter token="DBUSER" value="${gatormail.db.user}"/>
-                <filter token="DBCREDS" value="${gatormail.db.creds}"/>
-                <filter token="LDAPPRINC" value="${gatormail.ldap.principal}"/>
-                <filter token="LDAPCREDS" value="${gatormail.ldap.creds}"/>
-                <filter token="USEDATASOURCE" value="${gatormail.use.data.source}"/>
-                <filter token="JDBCDRIVER" value="${gatormail.jdbc.driver}"/>
-                <filter token="JDBCURL" value="${gatormail.jdbc.url}"/>
-                <filter token="ATTACHPATH" value="${gatormail.attachment.path}"/>
-            </filterset>
+            <filterchain>
+              <expandproperties />
+            </filterchain>
         </copy>
     </target>
 
