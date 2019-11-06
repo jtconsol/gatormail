@@ -1,12 +1,4 @@
-# Tested on mySQL and Postgresql
-create table addressbook(userid char(8), entry varchar(70));
-
-# Create an index for the userid, tested on mySQL and  PostgreSQL
-create index addressbook_idx on addressbook(userid);
-
-# Create an index for the userid, tested on DB2
-#create index addressbook_idx on addressbook(userid) cluster;
-
-
-# Create preferences table in DB2 (and probably others)
-CREATE TABLE preferences(userid char(8) NOT NULL, key varchar(128) NOT NULL, entry varchar(1024) NOT NULL);
+-- this was length 8 and 70 :) we can (and should) go bigger here, these are email-adresses
+CREATE TABLE addressbook(userid VARCHAR(255), entry VARCHAR(255) NOT NULL);
+CREATE TABLE preferences(userid VARCHAR(255) NOT NULL, key VARCHAR(128) NOT NULL, entry VARCHAR(1024) NOT NULL);
+CREATE INDEX addressbook_idx ON addressbook(userid);
