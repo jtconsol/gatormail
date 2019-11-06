@@ -80,9 +80,9 @@ public class RawMessageAction extends Action {
 
         final OutputStream out = response.getOutputStream();
 
-        final Enumeration enum = message.getAllHeaders();
-        while (enum.hasMoreElements()) {
-            final Header header = (Header)enum.nextElement();
+        final Enumeration enum1 = message.getAllHeaders();
+        while (enum1.hasMoreElements()) {
+            final Header header = (Header)enum1.nextElement();
             out.write(header.getName().getBytes());
             out.write(COLON_BYTES);
             out.write(header.getValue().getBytes());

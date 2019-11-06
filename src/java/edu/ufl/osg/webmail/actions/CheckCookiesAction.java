@@ -65,9 +65,9 @@ public class CheckCookiesAction extends Action {
             forward = mapping.findForward("success");
         } catch (Exception e) {
             final List headers = new ArrayList();
-            final Enumeration enum = request.getHeaderNames();
-            while (enum.hasMoreElements()) {
-                final String header = (String)enum.nextElement();
+            final Enumeration enum1 = request.getHeaderNames();
+            while (enum1.hasMoreElements()) {
+                final String header = (String)enum1.nextElement();
                 final Enumeration enum2 = request.getHeaders(header);
                 while (enum2.hasMoreElements()) {
                     headers.add(header + ": " + enum2.nextElement());
