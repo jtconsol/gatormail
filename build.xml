@@ -140,7 +140,7 @@
     <target name="build.classes" depends="init">
         <mkdir dir="${build.classes.dir}"/>
         <javac debug="${javac.debug}" destdir="${build.classes.dir}"
-            optimize="${javac.optimize}" srcdir="${src.java.dir}" deprecation="true">
+            optimize="${javac.optimize}" srcdir="${src.java.dir}" deprecation="true" includeantruntime="false">
             <classpath refid="classpath.servlet-api"/>
             <classpath refid="classpath.javamail"/>
             <classpath refid="classpath.struts"/>
