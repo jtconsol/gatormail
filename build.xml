@@ -3,24 +3,13 @@
     <description>GatorMail WebMail</description>
 
     <target name="init">
-        <!-- Give user a chance to override without editing this file
-               (and without typing -D each time it compiles it) -->
+        <!-- give user a chance to override without editing this file -->
         <property file="${user.home}/.gatormail.properties"/>
         <property file=".gatormail.properties"/>
-
-        <!-- Defaults for build, put local values for these in one of the files -->
-        <!-- above to override them. -->
-        <property name="gatormail.db.user" value="" description="The user for the database"/>
-        <property name="gatormail.db.creds" value="" description="The password for the database"/>
-        <property name="gatormail.ldap.principal" value="" description="The LDAP principal"/>
-        <property name="gatormail.ldap.creds" value="" description="The LDAP password"/>
-        <property name="gatormail.use.data.source" value="true"/>
-        <property name="gatormail.jdbc.driver" value="" description="depricated"/>
-        <property name="gatormail.jdbc.url" value="" description="depricated"/>
-        <property name="gatormail.attachment.path" value="" description="Local path to hold attachments until they are sent."/>
+        <!-- load our defaults last -->
+        <property file=".default.properties"/>
 
         <property name="VERSION" value="1.0.11"/>
-
         <tstamp/>
 
         <property name="javac.debug" value="true"/>
